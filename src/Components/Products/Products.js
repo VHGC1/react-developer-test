@@ -23,8 +23,11 @@ const PRODUCT_QUERY = `
      	 }
     	}
     	prices {
-      	currency
-      	amount
+        amount
+      	currency {
+          label
+          symbol
+        }
     	}
   	}
   }
