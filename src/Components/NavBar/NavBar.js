@@ -18,7 +18,7 @@ export default class NavBar extends Component {
   }
 
   handler(event) {
-    if (event.target === event.currentTarget){
+    if (event.target === event.currentTarget) {
       this.setState({
         cart: false,
       });

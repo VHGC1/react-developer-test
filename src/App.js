@@ -10,7 +10,7 @@ export default class App extends Component {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Products />} />
+          <Route path="/*" element={<Products />} />
         </Routes>   
       </BrowserRouter>
     );
