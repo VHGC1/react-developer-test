@@ -14,7 +14,6 @@ export default class CategoriesNav extends Component {
         <NavLink to="/tech">
           tech
         </NavLink>
-        
       </header>
     );
   }

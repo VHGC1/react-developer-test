@@ -4,28 +4,13 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
 import Cart from "../Cart/Cart";
+import { connect } from "react-redux";
+import { openCartModal } from "../../store/modal";
 
-export default class NavBar extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handler = this.handler.bind(this);
-
-    this.state = {
-      cart: false,
-      currency: false,
-    };
-  }
-
-  handler(event) {
-    if (event.target === event.currentTarget) {
-      this.setState({
-        cart: false,
-      });
-    }
-  }
-
+class NavBar extends Component {
   render() {
+    const { openCartModal } = this.props;
+
     return (
       <>
         <Header>
@@ -33,31 +18,35 @@ export default class NavBar extends Component {
             <Nav className="container">
               <div>Logo</div>
               <Wrapper>
-                <div
-                  onClick={() =>
-                    this.setState((prevState) => ({
-                      currency: !prevState.currency,
-                    }))
-                  }
-                >
+                <div>
                   <BsCurrencyDollar />
                   <IoIosArrowDown />
                 </div>
-                <div
-                  onClick={() =>
-                    this.setState((prevState) => ({
-                      cart: !prevState.cart,
-                    }))
-                  }
-                >
+                <div onClick={openCartModal}>
                   <RiShoppingCartLine />
                 </div>
               </Wrapper>
             </Nav>
           </Container>
         </Header>
-        {this.state.cart && <Cart action={this.handler} />}
+        <Cart />
       </>
     );
   }
 }
+
+function mapStateToProps(state) {
+  const cartModal = state.modal.cartModal;
+
+  return {
+    cartModal,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    openCartModal: () => dispatch(openCartModal()),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
