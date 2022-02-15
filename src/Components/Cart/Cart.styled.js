@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+//TODO: Create animation
+
 export const Skeleton = styled("div")`
   position: fixed;
   width: 100vw;
