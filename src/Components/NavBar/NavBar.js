@@ -37,9 +37,11 @@ class NavBar extends Component {
 
 function mapStateToProps(state) {
   const cartModal = state.modal.cartModal;
-
+  const currency = state.currency;
+  
   return {
     cartModal,
+    currency
   };
 }
 

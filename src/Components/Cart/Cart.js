@@ -34,7 +34,7 @@ class Cart extends Component {
                   position: "absolute",
                   left: ".5rem",
                   cursor: "pointer",
-                  fontSize: "1.5rem"
+                  fontSize: "2rem"
                 }}
               />
 
