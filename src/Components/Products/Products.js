@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PRODUCT_QUERY from "../../query";
-import CategoriesNav from "../CategoriesNav/CategoriesNav";
 import { fetchProducts } from "../../store/products";
 import ProductsCard from "./ProductsCard";
 
@@ -13,13 +12,12 @@ class Products extends Component {
   render() {
     return (
       <section
+      className="container"
         style={{
           margin: "5rem auto",
-          padding: "150px 150px 0",
         }}
       >
         <h1>Header</h1>
-        <CategoriesNav />
         <ProductsCard />
       </section>
     );

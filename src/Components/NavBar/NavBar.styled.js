@@ -6,7 +6,7 @@ export const Header = styled("header")`
   width: 100%;
 `
 export const Container = styled("div")`
-  background: #eee;
+  background: #fff;
 `
 
 export const Nav = styled("nav")`
