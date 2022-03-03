@@ -14,7 +14,8 @@ class Filter extends Component {
     return (
       <div>
         <CategoryButton
-          onClick={() => this.props.setCategory("")}
+          value=""
+          onClick={({ target }) => this.props.setCategory(target.value)}
           category={currentCategory}
         >
           All

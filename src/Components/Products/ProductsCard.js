@@ -12,26 +12,32 @@ import {
 class ProductsCard extends Component {
   render() {
     const data = this.props.products;
+    const currentCategory = this.props.category;
 
     return (
       <div>
         <div>ProductsCard</div>
         <WrapperProducts>
-          {data?.map(({ id, name, gallery, attributes, inStock, prices }) => (
-            <CardWrapper key={id}>
-              <Link to={`/products/${id}`}>
-                <Slider photos={gallery} alt={id} attributes={attributes} />
-              </Link>
+          {data
+            ?.filter(({ category }) => category.includes(currentCategory))
+            .map(({ id, name, gallery, attributes, inStock, prices }) => (
+              <CardWrapper key={id}>
+                <Link to={`/products/${id}`}>
+                  <Slider photos={gallery} alt={id} attributes={attributes} />
+                </Link>
 
-              <WrapperCardInfo>
-                <ShoppingCartLine />
-                <p>{name}</p>
-                <span>
-                  {prices[0].currency.symbol} {prices[0].amount}
-                </span>
-              </WrapperCardInfo>
-            </CardWrapper>
-          ))}
+                <WrapperCardInfo>
+                  <Link to={`/products/${id}`}>
+                    <ShoppingCartLine />
+                  </Link>
+
+                  <p>{name}</p>
+                  <span>
+                    {prices[0].currency.symbol} {prices[0].amount}
+                  </span>
+                </WrapperCardInfo>
+              </CardWrapper>
+            ))}
         </WrapperProducts>
       </div>
     );
@@ -40,9 +46,11 @@ class ProductsCard extends Component {
 
 function mapStateToProps(state) {
   const products = state.products.data;
+  const { category } = state.category;
 
   return {
     products,
+    category,
   };
 }
 

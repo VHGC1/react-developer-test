@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const slice = createSlice({
   name: "category",
   initialState: {
-    category: "All",
+    category: "",
   },
   reducers: {
     setCategory(state, action) {
