@@ -11,6 +11,14 @@ export const WrapperProducts = styled("ul")`
     object-fit: cover;
     object-position: top;
   }
+
+  @media (max-width: 50rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 35rem) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const CardWrapper = styled("li")`
@@ -35,8 +43,8 @@ export const ShoppingCartLine = styled(RiShoppingCartLine)`
   display: none;
   cursor: pointer;
   position: absolute;
-  top: -1.5rem;
-  right: 0.1rem;
+  top: -2.35rem;
+  right: 0;
   background: #5ece7b;
   color: #fff;
   border-radius: 50%;

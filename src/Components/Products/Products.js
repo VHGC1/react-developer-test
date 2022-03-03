@@ -24,7 +24,7 @@ class Products extends Component {
         }}
       >
         <div style={{ marginBottom: "1.5rem" }}>
-          <h1>{title}</h1>
+          <h1 style={{ fontWeight: "300", fontSize: "2.1rem" }}>{title}</h1>
         </div>
         <ProductsCard />
       </section>

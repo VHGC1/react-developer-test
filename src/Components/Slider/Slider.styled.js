@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ImgWrapper = styled("div")`
-  
+  margin-bottom: 1rem;
 `
 
 export const Img = styled("img")`

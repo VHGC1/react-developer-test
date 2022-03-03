@@ -7,7 +7,8 @@ export const CategoryButton = styled("button")`
   border: none;
   cursor: pointer;
   padding: 0 1rem;
-  
+  font-family: inherit;
+
   ${({ value, category }) =>
     value === category &&
     css`
