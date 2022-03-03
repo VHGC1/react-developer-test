@@ -19,7 +19,7 @@ export const CardWrapper = styled("li")`
   padding: 1rem;
 
   &:hover {
-    box-shadow: 1px 2px 10px 1px rgba(0, 0, 0, 0.53);
+    box-shadow: 4px 4px 33px -2px rgb(0 0 0 / 10%);
   }
 
   &:hover div svg {

@@ -18,12 +18,14 @@ class Products extends Component {
 
     return (
       <section
-        className="container"
+        className="container animeLeft"
         style={{
-          margin: "5rem auto",
+          margin: "7rem auto 5rem",
         }}
       >
-        <h1>{title}</h1>
+        <div style={{ marginBottom: "1.5rem" }}>
+          <h1>{title}</h1>
+        </div>
         <ProductsCard />
       </section>
     );
