@@ -10,14 +10,20 @@ class Products extends Component {
   }
 
   render() {
+    const { category } = this.props;
+    const title =
+      category.length > 0
+        ? category[0].toUpperCase() + category.substring(1)
+        : "All";
+
     return (
       <section
-      className="container"
+        className="container"
         style={{
           margin: "5rem auto",
         }}
       >
-        <h1>Header</h1>
+        <h1>{title}</h1>
         <ProductsCard />
       </section>
     );
@@ -30,9 +36,11 @@ const mapActionsToPros = {
 
 function mapStateToProps(state) {
   const products = state.products;
+  const { category } = state.category;
 
   return {
     products,
+    category,
   };
 }
 

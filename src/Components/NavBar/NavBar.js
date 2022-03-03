@@ -6,6 +6,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import Cart from "../Cart/Cart";
 import { connect } from "react-redux";
 import { openCartModal } from "../../store/modal";
+import Filter from "./Filter";
 
 class NavBar extends Component {
   render() {
@@ -16,7 +17,7 @@ class NavBar extends Component {
         <Header>
           <Container>
             <Nav className="container">
-              <div>Logo</div>
+              <Filter />
               <Wrapper>
                 <div>
                   <BsCurrencyDollar />
