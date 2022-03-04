@@ -18,7 +18,7 @@ class Products extends Component {
 
     return (
       <section
-        className="container animeLeft"
+        className="container"
         style={{
           margin: "7rem auto 5rem",
         }}
