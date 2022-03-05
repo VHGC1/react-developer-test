@@ -16,7 +16,7 @@ class ProductsCard extends Component {
 
     return (
       <div>
-        <WrapperProducts className="animeLeft" >
+        <WrapperProducts className="animeLeft">
           {data
             ?.filter(({ category }) => category.includes(currentCategory))
             .map(({ id, name, gallery, attributes, inStock, prices }) => (
@@ -26,9 +26,7 @@ class ProductsCard extends Component {
                 </Link>
 
                 <WrapperCardInfo>
-                  <Link to={`/products/${id}`}>
-                    <ShoppingCartLine />
-                  </Link>
+                  <ShoppingCartLine />
 
                   <p>{name}</p>
                   <span>

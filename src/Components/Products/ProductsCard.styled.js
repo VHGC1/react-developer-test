@@ -7,6 +7,10 @@ export const WrapperProducts = styled("ul")`
   gap: 1rem;
   justify-content: center;
 
+  & p {
+    margin-bottom: .25rem;
+  }
+
   & li:nth-child(2) a div img {
     object-fit: cover;
     object-position: top;

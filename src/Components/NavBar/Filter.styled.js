@@ -14,10 +14,12 @@ export const CategoryButton = styled("button")`
     css`
       color: #5ece7b;
       border-bottom: 3px solid #5ece7b;
+      font-weight: bold;
     `}
   
   &:hover {
     color: #5ece7b;
     border-bottom: 3px solid #5ece7b;
+    font-weight: bold;
   }
 `;
